@@ -6,8 +6,7 @@
 <%@include file="dynamic/header.jspf" %>
 
 <body>
-<h1>Hello, World!!!</h1>
-<%--	<div class="site-mobile-menu site-navbar-target">
+	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
 				<span class="icofont-close js-menu-toggle"></span>
@@ -65,8 +64,8 @@
 								<form class="form">
 									<div class="row mb-2">
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
-											<select name="" id="" class="form-control custom-select">
-												<option value="">Destination</option>
+											<select name="Destination" id="Destination" class="form-control custom-select">
+												<option value="">Skąd</option>
 												<option value="">Peru</option>
 												<option value="">Japan</option>
 												<option value="">Thailand</option>
@@ -84,18 +83,33 @@
 											<input type="text" class="form-control" placeholder="# of People">
 										</div>
 
-									</div>    
+									</div>
+									<div class="row mb-2">
+										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
+											<select name="" id="" class="form-control custom-select">
+												<option value="">Dokąd</option>
+												<option value="">Peru</option>
+												<option value="">Japan</option>
+												<option value="">Thailand</option>
+												<option value="">Brazil</option>
+												<option value="">United States</option>
+												<option value="">Israel</option>
+												<option value="">China</option>
+												<option value="">Russia</option>
+											</select>
+										</div>
+									</div>
 									<div class="row align-items-center">
 										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
 											<input type="submit" class="btn btn-primary btn-block" value="Search">
 										</div>
-										<div class="col-lg-8">
-											<label class="control control--checkbox mt-3">
-												<span class="caption">Save this search</span>
-												<input type="checkbox" checked="checked" />
-												<div class="control__indicator"></div>
-											</label>
-										</div>
+<%--										<div class="col-lg-8">--%>
+<%--											<label class="control control--checkbox mt-3">--%>
+<%--												<span class="caption">Save this search</span>--%>
+<%--												<input type="checkbox" checked="checked" />--%>
+<%--												<div class="control__indicator"></div>--%>
+<%--											</label>--%>
+<%--										</div>--%>
 									</div>
 								</form>
 							</div>
@@ -104,11 +118,11 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="slides">
-						<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid active">
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
-						<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
-						<img src="images/hero-slider-5.jpg" alt="Image" class="img-fluid">
+						<img src='<c:url value="/resources/images/hero-slider-1.jpg"/>' alt="Image" class="img-fluid active">
+						<img src='<c:url value="/resources/images/hero-slider-2.jpg"/>' alt="Image" class="img-fluid">
+						<img src='<c:url value="/resources/images/hero-slider-3.jpg"/>' alt="Image" class="img-fluid">
+						<img src='<c:url value="/resources/images/hero-slider-4.jpg"/>' alt="Image" class="img-fluid">
+						<img src='<c:url value="/resources/images/hero-slider-5.jpg" />'alt="Image" class="img-fluid">
 					</div>
 				</div>
 			</div>
@@ -116,7 +130,7 @@
 	</div>
 
 
-	<div class="untree_co-section">
+	<%--<div class="untree_co-section">
 		<div class="container">
 			<div class="row mb-5 justify-content-center">
 				<div class="col-lg-6 text-center">
@@ -473,7 +487,7 @@
 				<div class="col-md-12">
 					<h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
 					<p class="mb-4 lead text-white text-white-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, fugit?</p>
-					<p class="mb-0"><a href="booking.html" class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
+&lt;%&ndash;					<p class="mb-0"><a href="booking.html" class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>&ndash;%&gt;
 				</div>
 			</div>
 		</div>
@@ -597,8 +611,8 @@
 		})
 	</script>
 
-	<script src="js/custom.js"></script>--%>
-
+	<script src="js/custom.js"></script>
+--%>
 </body>
 <%@include file="dynamic/footer.jspf" %>
 
