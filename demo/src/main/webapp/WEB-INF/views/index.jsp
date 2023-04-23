@@ -5,12 +5,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="dynamic/header.jspf" %>
 
-
-
 <body>
-
-
-	<div class="site-mobile-menu site-navbar-target">
+<h1>Hello, World!!!</h1>
+<%--	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
 				<span class="icofont-close js-menu-toggle"></span>
@@ -600,7 +597,7 @@
 		})
 	</script>
 
-	<script src="js/custom.js"></script>
+	<script src="js/custom.js"></script>--%>
 
 </body>
 <%@include file="dynamic/footer.jspf" %>
