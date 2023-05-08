@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link href='<c:url value="/resources/images/favicon.png"/>' rel="shortcut icon"/>
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content="bootstrap, bootstrap4"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <link href='<c:url value="/resources/css/bootstrap.min.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/owl.carousel.min.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/owl.theme.default.min.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/jquery.fancybox.min.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/fonts/icomoon/style.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/fonts/flaticon/font/flaticon.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/daterangepicker.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/aos.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/style.css"/>' rel="stylesheet"/>
+
+    <title>Travel Office</title>
+
+</head>
+
+<body>
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body">
+    </div>
+</div>
+
+<nav class="site-nav">
+    <div class="container">
+        <div class="site-navigation">
+            <a href="index.html" class="logo m-0">Travel Office</a>
+
+            <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class="has-children"><a href="#">Popular Destination</a>
+                    <ul class="dropdown">
+                        <li><a href="elements.html">Elements</a></li>
+                    </ul>
+                </li>
+                <li><a href="last_minute.html">Last Minute</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><input type="button" class="btn bg-white text-dark btn-block" value="Register"></li>
+                <li><input type="button" class="btn bg-white text-dark btn-block" value="Sign in"></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="hero">
+    <div class="row justify-content-center">
+        <div class="col-lg-3">
+            <div class="container align-top">
+
+
+                <div class="intro-wrap">
+                    <h2 class="mb-5 text-white font-italic text-center"><span
+                            class="d-block">Find your dream holidays!</span> Travel to <span
+                            class="typed-words"></span></h2>
+
+                    <div class="row mx-auto">
+                        <div class="col-lg-12">
+                            <form class="form">
+
+
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                        <input type="text" class="form-control text-center"
+                                               placeholder="Your location..." data-toggle="tooltip"
+                                               title="Your location..." value="Polska">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                        <input type="text" class="form-control text-center"
+                                               placeholder="Your location..." data-toggle="tooltip"
+                                               title="Your location..." value="Polska">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                        <input type="text" class="form-control text-center"
+                                               placeholder="Where are you going?" data-toggle="tooltip"
+                                               title="Where are you going?">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                        <input type="text" class="form-control text-center" name="daterange"
+                                               data-toggle="tooltip"
+                                               title="Range date start">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-4">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                        <div class="dropdown">
+                                            <button class="form-control" type="button" id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span id="numberOfAdults"></span> adults * <span
+                                                    id="numberOfChldren"></span> children
+                                            </button>
+
+
+                                            <div class="dropdown-menu mx-2 col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-11"
+                                                 aria-labelledby="dropdownMenuButton">
+                                                <div class="row mb-2">
+                                                    <div class="col-lg-5 text-center">
+                                                        <b>Adults</b>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <input type="number" class="text-center" min="0" max="50"
+                                                               step="1" value="2"
+                                                               name="adults" id="adults">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-lg-5 text-center">
+                                                        <b>Children</b>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <input type="number" class="text-center" min="0" max="50"
+                                                               step="1" value="0"
+                                                               name="children" id="children">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2 px-5">
+                                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                                        <button type="button"
+                                                                class="btn btn-primary btn-close btn-block"
+                                                                onclick="getNumberPeople()">Select
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
+                                        <input type="submit" class="btn btn-primary btn-block" value="Search">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="container align-items-center">
