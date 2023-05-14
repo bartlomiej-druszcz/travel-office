@@ -76,7 +76,6 @@
 
     </div>
 
-
 </div>
 
 <%@include file="dynamic/footer.jspf" %>
