@@ -23,12 +23,14 @@
     <link href='<c:url value="/resources/css/daterangepicker.css"/>' rel="stylesheet"/>
     <link href='<c:url value="/resources/css/aos.css"/>' rel="stylesheet"/>
     <link href='<c:url value="/resources/css/style.css"/>' rel="stylesheet"/>
+    <link href='<c:url value="/resources/css/my.css"/>' rel="stylesheet"/>
 
     <title>Travel Office</title>
 
 </head>
 
 <body>
+
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -42,18 +44,22 @@
 <nav class="site-nav">
     <div class="container">
         <div class="site-navigation">
-            <a href="index.html" class="logo m-0">Travel Office</a>
+            <a href='<c:url value="/"/>' class="logo m-0">Travel Office</a>
 
             <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href='<c:url value="/"/>'>Home</a></li>
                 <li class="has-children"><a href="#">Popular Destination</a>
                     <ul class="dropdown">
-                        <li><a href="elements.html">Elements</a></li>
+                        <li><a href='<c:url value="/popular/Chorwacja"/>'>Chorwacja</a></li>
+                        <li><a href='<c:url value="/popular/Hiszpania"/>'>Hiszpania</a></li>
+                        <li><a href='<c:url value="/popular/Grecja"/>'>Grecja</a></li>
+                        <li><a href='<c:url value="/popular/Egipt"/>'>Egipt</a></li>
+                        <li><a href='<c:url value="/popular/Malta"/>'>Malta</a></li>
                     </ul>
                 </li>
-                <li><a href="last_minute.html">Last Minute</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href='<c:url value="/lastMinute"/>'>Last Minute</a></li>
+                <li><a href='<c:url value="/about"/>'>About</a></li>
+                <li><a href='<c:url value="/contact"/>'>Contact Us</a></li>
                 <li><input type="button" class="btn bg-white text-dark btn-block" value="Register"></li>
                 <li><input type="button" class="btn bg-white text-dark btn-block" value="Sign in"></li>
             </ul>
@@ -61,12 +67,10 @@
     </div>
 </nav>
 
-
 <div class="hero">
     <div class="row justify-content-center">
         <div class="col-lg-3">
             <div class="container align-top">
-
 
                 <div class="intro-wrap">
                     <h2 class="mb-5 text-white font-italic text-center"><span
@@ -75,41 +79,44 @@
 
                     <div class="row mx-auto">
                         <div class="col-lg-12">
-                            <form class="form">
-
+                            <form class="form" action='<c:url value="/filterResult"/>'>
 
                                 <div class="row mb-2">
                                     <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
-                                        <input type="text" class="form-control text-center"
+                                        <input type="text" id="location1" class="form-control text-center"
                                                placeholder="Your location..." data-toggle="tooltip"
                                                title="Your location..." value="Polska">
                                     </div>
                                 </div>
 
+                                <div class="row mb-2">
+                                    <div class="col-sm-6 col-md-3 mb-2 mb-lg-0 col-lg-6 pr-1">
+                                        <input type="number" id="priceFrom" class="form-control text-center"
+                                               placeholder="Price from" data-toggle="tooltip"
+                                               title="Price from">
+                                    </div>
+                                    <div class="col-sm-6 col-md-3 mb-2 mb-lg-0 col-lg-6 pl-1">
+                                        <input type="number" id="priceTo" class="form-control text-center"
+                                               placeholder="Price to" data-toggle="tooltip"
+                                               title="Price to">
+                                    </div>
+                                </div>
 
                                 <div class="row mb-2">
                                     <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
-                                        <input type="text" class="form-control text-center"
-                                               placeholder="Your location..." data-toggle="tooltip"
-                                               title="Your location..." value="Polska">
+                                        <input type="text" id="destination" name="destination"
+                                               class="form-control text-center" placeholder="Where are you going?"
+                                               data-toggle="tooltip" title="Where are you going?">
                                     </div>
                                 </div>
 
 
                                 <div class="row mb-2">
                                     <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
-                                        <input type="text" class="form-control text-center"
-                                               placeholder="Where are you going?" data-toggle="tooltip"
-                                               title="Where are you going?">
-                                    </div>
-                                </div>
-
-
-                                <div class="row mb-2">
-                                    <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
-                                        <input type="text" class="form-control text-center" name="daterange"
+                                        <input type="text" id="dateStart" class="form-control text-center"
+                                               name="daterange"
                                                data-toggle="tooltip"
-                                               title="Range date start">
+                                               title="Select a travel start date range">
                                     </div>
                                 </div>
 
@@ -117,12 +124,12 @@
                                 <div class="row mb-4">
                                     <div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-12">
                                         <div class="dropdown">
-                                            <button class="form-control" type="button" id="dropdownMenuButton"
+
+                                            <button type="button" class="form-control" id="dropdownMenuButton"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <span id="numberOfAdults"></span> adults * <span
                                                     id="numberOfChldren"></span> children
                                             </button>
-
 
                                             <div class="dropdown-menu mx-2 col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-11"
                                                  aria-labelledby="dropdownMenuButton">
@@ -132,8 +139,8 @@
                                                     </div>
                                                     <div class="col-lg-5">
                                                         <input type="number" class="text-center" min="0" max="50"
-                                                               step="1" value="2"
-                                                               name="adults" id="adults">
+                                                               step="1" value="2" name="adults" id="adults"
+                                                               onclick="getNumberPeople()">
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2">
@@ -142,8 +149,8 @@
                                                     </div>
                                                     <div class="col-lg-5">
                                                         <input type="number" class="text-center" min="0" max="50"
-                                                               step="1" value="0"
-                                                               name="children" id="children">
+                                                               step="1" value="0" name="children" id="children"
+                                                               onclick="getNumberPeople()">
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2 px-5">
@@ -156,6 +163,37 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0 justify-content-center">
+                                    <label>Hotel Star Rating :</label>
+                                </div>
+                                <div class="row mb-2 justify-content-center">
+                                    <div class="col-lg-2 text-center">
+                                        <input type="checkbox" class="form-control" id="star1" name="star"
+                                               value="1" data-toggle="tooltip" title="Hotel 1 star">
+                                        <label for="star1">1</label>
+                                    </div>
+                                    <div class="col-lg-2 text-center">
+                                        <input type="checkbox" class="form-control" id="star2" name="star"
+                                               value="2" data-toggle="tooltip" title="Hotel 2 stars">
+                                        <label for="star2">2</label>
+                                    </div>
+                                    <div class="col-lg-2 text-center">
+                                        <input type="checkbox" class="form-control" id="star3" name="star"
+                                               value="3" data-toggle="tooltip" title="Hotel 3 stars">
+                                        <label for="star3">3</label>
+                                    </div>
+                                    <div class="col-lg-2 text-center">
+                                        <input type="checkbox" class="form-control" id="star4" name="star"
+                                               value="4" data-toggle="tooltip" title="Hotel 4 stars">
+                                        <label for="star4">4</label>
+                                    </div>
+                                    <div class="col-lg-2 text-center">
+                                        <input type="checkbox" class="form-control" id="star5" name="star"
+                                               value="5" data-toggle="tooltip" title="Hotel 5 stars">
+                                        <label for="star5">5</label>
                                     </div>
                                 </div>
 

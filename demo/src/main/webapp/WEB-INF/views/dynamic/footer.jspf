@@ -108,8 +108,9 @@
 <script src='<c:url value="/resources/js/aos.js"/>'></script>
 <script src='<c:url value="/resources/js/moment.min.js"/>'></script>
 <script src='<c:url value="/resources/js/daterangepicker.js"/>'></script>
-
 <script src='<c:url value="/resources/js/typed.js"/>'></script>
+<script src='<c:url value="/resources/js/my.js"/>'></script>
+
 <script>
     $(function () {
         var typed = new Typed('.typed-words', {
@@ -130,11 +131,6 @@
         });
     })
 
-    function getNumberPeople() {
-        document.getElementById("numberOfAdults").innerHTML = document.getElementById('adults').value;
-        document.getElementById("numberOfChldren").innerHTML = document.getElementById('children').value;
-
-    }
 </script>
 
 <script src='<c:url value="/resources/js/custom.js"/>'></script>
