@@ -38,6 +38,9 @@ public class HotelModel {
     @Column(name = "airport")
     private String airport;
 
+    @Column(name = "url_image")
+    private String urlImage;
+
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "hotelModel")
     private Set<TripModel> trips = new HashSet<>();
 
