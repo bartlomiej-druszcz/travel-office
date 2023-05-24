@@ -60,6 +60,7 @@
                 <li><a href='<c:url value="/lastMinute"/>'>Last Minute</a></li>
                 <li><a href='<c:url value="/about"/>'>About</a></li>
                 <li><a href='<c:url value="/contact"/>'>Contact Us</a></li>
+                <li><a href='<c:url value="/addNewTrip"/>'>Add new trip</a></li>
                 <li><input type="button" class="btn bg-white text-dark btn-block" value="Register"></li>
                 <li><input type="button" class="btn bg-white text-dark btn-block" value="Sign in"></li>
             </ul>

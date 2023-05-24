@@ -20,7 +20,8 @@ public class TripService {
         return tripRepository.findAll();
     }
 
-    public void addTrip(TripModel tripModel) {
+    public void addNewTrip(TripModel tripModel) {
+
         tripRepository.save(tripModel);
     }
 

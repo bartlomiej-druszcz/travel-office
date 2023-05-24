@@ -46,14 +46,15 @@ public class TripController {
         return "trips";
     }
 
-    @GetMapping("/addTrip")
-    public String getAddTrip() {
+    @GetMapping("/addNewTrip")
+    public String getAddNewTrip() {
         return "addNewTrip";
     }
 
-    @PostMapping("/addTrip")
-    public RedirectView postAddTrip(TripModel trip) {
-        tripService.addTrip(trip);
+    @PostMapping("/addNewTrip")
+    public RedirectView postAddNewTrip(@ModelAttribute TripModel tripModel) {
+        tripService.addNewTrip(tripModel);
+        System.out.println(tripModel.toString());;
         return new RedirectView("/trips");
     }
 
